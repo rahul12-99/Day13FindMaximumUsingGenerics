@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class GenericsMaximum {
     /*
-     * Method for test maximum integer
+     * Method for test maximum float
      * @param a
      * @param b
      * @param c
      */
 
-    public void getMax(Integer a, Integer b, Integer c) {
-        Integer maximum = a;
+    public void getMax(Float a, Float b, Float c) {
+        Float maximum = a;
         if (b.compareTo(maximum) > 0) {
             maximum = b;
         }
@@ -30,11 +30,11 @@ public class GenericsMaximum {
         GenericsMaximum genericsMax = new GenericsMaximum();
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter first value");
-        Integer a = sc.nextInt();
+        Float a = sc.nextFloat();
         System.out.println("Enter second value");
-        Integer b = sc.nextInt();
+        Float b = sc.nextFloat();
         System.out.println("Enter third value");
-        Integer c = sc.nextInt();
+        Float c = sc.nextFloat();
         genericsMax.getMax(a, b, c);
     }
 }
