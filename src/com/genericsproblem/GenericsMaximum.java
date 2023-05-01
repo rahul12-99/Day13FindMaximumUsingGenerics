@@ -10,8 +10,8 @@ public class GenericsMaximum {
      * @param c
      */
 
-    public void getMax(Float a, Float b, Float c) {
-        Float maximum = a;
+    public void getMax(String a, String b, String c) {
+        String maximum = a;
         if (b.compareTo(maximum) > 0) {
             maximum = b;
         }
@@ -30,11 +30,11 @@ public class GenericsMaximum {
         GenericsMaximum genericsMax = new GenericsMaximum();
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter first value");
-        Float a = sc.nextFloat();
+        String a = sc.next();
         System.out.println("Enter second value");
-        Float b = sc.nextFloat();
+        String b = sc.next();
         System.out.println("Enter third value");
-        Float c = sc.nextFloat();
+        String c = sc.next();
         genericsMax.getMax(a, b, c);
     }
 }
