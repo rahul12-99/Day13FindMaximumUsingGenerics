@@ -1,40 +1,32 @@
 package com.genericsproblem;
 
-import java.util.Scanner;
-
 public class GenericsMaximum {
     /*
-     * Method for test maximum float
+     * method for test maximum using generics which extends comparable
      * @param a
      * @param b
      * @param c
+     * @param <generics>
      */
-
-    public void getMax(String a, String b, String c) {
-        String maximum = a;
+    public static <generics extends Comparable<generics>> void testMax(generics a, generics b, generics c) {
+        generics maximum = a;
         if (b.compareTo(maximum) > 0) {
             maximum = b;
         }
         if (c.compareTo(maximum) > 0) {
             maximum = c;
         }
-        System.out.println("Maximum is : " + maximum);
+        System.out.println("Maximum is " + maximum);
     }
 
     /*
-     * Main method for taking user input and calling the get max method
+     * main method for call the testMax method for integer,float and strings
      * @param args
      */
 
     public static void main(String[] args) {
-        GenericsMaximum genericsMax = new GenericsMaximum();
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter first value");
-        String a = sc.next();
-        System.out.println("Enter second value");
-        String b = sc.next();
-        System.out.println("Enter third value");
-        String c = sc.next();
-        genericsMax.getMax(a, b, c);
+        testMax(10,20,30);
+        testMax(12.3f,23.4f,34.5f);
+        testMax("rahul","kundan","sahil");
     }
 }
