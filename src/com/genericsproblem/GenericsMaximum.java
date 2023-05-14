@@ -1,18 +1,13 @@
 package com.genericsproblem;
 
-/*
- * Extend the max method to take more than three parameters
- */
-
 import java.util.Arrays;
+/*
+ * Print method class to print max method
+ */
 
 public class GenericsMaximum {
     /**
-     * This method is for testMax using generics, and it's extends comparable
-     * @param a
-     * @param b
-     * @param c
-     * @param <T>
+     * Generics method to test max method to test maximum
      */
     public static <T extends Comparable<T>> void testMax(T a, T b, T c) {
         T maximum = a;
@@ -23,32 +18,25 @@ public class GenericsMaximum {
             maximum = c;
         }
         System.out.println("Maximum is " + maximum);
-
     }
 
     /**
-     * This method is for getMaxMoreThanThreeParameter
-     * @param x
-     * @param arg
-     * @return
-     * @param <E>
+     * Generics method print maximum method
      */
 
     @SafeVarargs
-    public static <E> E getMaxMoreThanThree(E x, E... arg) {
+    public static <E> void printMax(E x, E... arg) {
         Arrays.sort(arg);
-        return arg[arg.length - 1];
+        System.out.println("Maximum is " + arg[arg.length - 1]);
     }
 
-    /*
-     * Main method to call the testMax method and getMaxMoreThanThree parameter
-     * @param args
+    /**
+     * This is main method for calling all the method and passing the input and printing
      */
-
     public static void main(String[] args) {
         testMax(10, 20, 30);
         testMax(12.3f, 23.4f, 34.5f);
-        testMax("rahul", "kundan", "sahil");
-        System.out.println("maximum is " + getMaxMoreThanThree(4, 5, 6, 76, 12, 45, 31));
+        testMax("rahul", "kumar", "twinkle");
+        printMax(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
     }
 }
